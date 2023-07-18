@@ -8,7 +8,7 @@ const axios = require('axios'); //추가
 const options = {
   'method': 'GET',
   //'url': 'https://openapi.naver.com/v1/search/book_adv',
-  'url': 'https://openapi.naver.com/v1/search/book.json',
+  'url': 'https://openapi.naver.com/v1/search/book.json?query=셜록홈즈',
   'headers': {
     'X-Naver-Client-Id': 'j8PIiTpiuPi6PzcQD4MV',
     'X-Naver-Client-Secret': 'DuZ9KkT_ZH'
@@ -18,7 +18,6 @@ const options = {
 app.get('/', (req, res) => {
   // req.query에서 query 파라미터를 받아옴
   const query = req.query.query;
-  console.log(query);
   // query 파라미터가 없으면 에러 메시지 전송
   if (!query) {
     res.status(400).send('query parameter is required');
