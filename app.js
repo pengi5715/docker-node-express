@@ -9,7 +9,7 @@ const options = {
   'method': 'GET',
   //'url': 'https://openapi.naver.com/v1/search/book_adv',
   'url': 'https://openapi.naver.com/v1/search/book.json',
-  'params': { query: 'YOUR_QUERY', display: 10, start: 1 } //추가
+  'params': { query: 'YOUR_QUERY', display: 10, start: 1 }, //추가
   'headers': {
     'X-Naver-Client-Id': 'j8PIiTpiuPi6PzcQD4MV',
     'X-Naver-Client-Secret': 'DuZ9KkT_ZH'
