@@ -24,7 +24,8 @@ app.get('/', (req, res) => {
     return;
   }
   // query 파라미터를 options 객체에 추가
-  options.params = {query};
+  //options.params = {query};
+  options.qs = {query};
   request(options, function (error, response) {
     if (error) throw new Error(error);
     res.send(response.body);
