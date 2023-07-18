@@ -6,7 +6,7 @@ RUN npm ci --only=production
 # 추가된 부분
 RUN npm install 
 RUN npm install axios
-RUN npm install -g request
+RUN npm install request
 
 ENV NODE_ENV production
 
