@@ -18,6 +18,7 @@ const options = {
 app.get('/', (req, res) => {
   // req.query에서 query 파라미터를 받아옴
   const query = req.query.query;
+  console.log(query);
   // query 파라미터가 없으면 에러 메시지 전송
   if (!query) {
     res.status(400).send('query parameter is required');
