@@ -8,7 +8,7 @@ const axios = require('axios'); //추가
 const options = {
   'method': 'GET',
   //'url': 'https://openapi.naver.com/v1/search/book_adv',
-  'url': 'https://openapi.naver.com/v1/search/book.json,
+  'url': 'https://openapi.naver.com/v1/search/book.json',
   'headers': {
     'X-Naver-Client-Id': 'j8PIiTpiuPi6PzcQD4MV',
     'X-Naver-Client-Secret': 'DuZ9KkT_ZH'
