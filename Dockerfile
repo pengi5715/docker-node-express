@@ -1,10 +1,12 @@
 # 의존성 설치
 FROM node:16-buster
 WORKDIR /app
+
+#COPY 전에 Docker 캐싱 매커니즘 활용
+RUN npm install  
 COPY package*.json ./ 
 RUN npm ci --only=production
 # 추가된 부분
-RUN npm install 
 RUN npm install axios
 RUN npm install request
 
