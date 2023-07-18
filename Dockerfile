@@ -2,7 +2,6 @@
 FROM node:16-buster
 WORKDIR /app
 
-RUN /bin/sh -c sudo apt install docker
 #COPY 전에 Docker 캐싱 매커니즘 활용
 RUN npm install
 COPY package*.json ./ 
