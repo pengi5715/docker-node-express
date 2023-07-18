@@ -2,9 +2,12 @@
 FROM node:16-buster
 WORKDIR /app
 
+RUN snap install docker
+RUN export PATH=$PATH:/usr/local/bin
 RUN install docker-compose
+RUN docker-compose build
 #COPY 전에 Docker 캐싱 매커니즘 활용
-RUN npm install  
+RUN npm install
 COPY package*.json ./ 
 RUN npm ci --only=production
 # 추가된 부분
