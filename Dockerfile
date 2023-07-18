@@ -2,9 +2,9 @@
 FROM node:16-buster
 WORKDIR /app
 
-RUN snap install docker
-RUN export PATH=$PATH:/usr/local/bin
-RUN install docker-compose
+RUN sudo apt install docker
+RUN sudo export PATH=$PATH:/usr/local/bin
+RUN sudo apt install docker-compose
 RUN docker-compose up --build
 #COPY 전에 Docker 캐싱 매커니즘 활용
 RUN npm install
