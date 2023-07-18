@@ -2,7 +2,7 @@
 FROM node:16-buster
 WORKDIR /app
 
-RUN docker-compose build
+RUN install docker-compose
 #COPY 전에 Docker 캐싱 매커니즘 활용
 RUN npm install  
 COPY package*.json ./ 
