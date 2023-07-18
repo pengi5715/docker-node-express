@@ -27,7 +27,10 @@ app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
 */
-
+const express = require('express');
+const request = require('request');
+const app = express();
+const port = 3000;
 const axios = require('axios');
 
 const CLIENT_ID = 'j8PIiTpiuPi6PzcQD4MV';
@@ -44,6 +47,15 @@ axios.request(options).then(function (response) {
   console.log(response.data);
 }).catch(function (error) {
   console.error(error);
+
+app.get('/', (req, res) => {
+  request(options, function (error, response) {
+    if (error) throw new Error(error);
+    res.send(response.body);
+});
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+  
 });
 
 
