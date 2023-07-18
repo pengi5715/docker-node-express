@@ -36,6 +36,7 @@ app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
 
+/*
 //추가
 axios.request(options).then(function (response) {
   console.log(response.data);
