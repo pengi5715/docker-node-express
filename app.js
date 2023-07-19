@@ -1,3 +1,4 @@
+/*------------------------------------------기존적용-API 호출하고 응답받은 데이터를 인텔리북.org로 전송하는--------------------
 const express = require('express');
 const app = express();
 const port = 3000;
@@ -55,9 +56,8 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+*/
 
-
-/*------------------------------------------기존적용-------------------------------------------------------
 const express = require('express');
 const app = express();
 const port = 3000;
