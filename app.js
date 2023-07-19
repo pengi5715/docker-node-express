@@ -36,6 +36,15 @@ app.get('/', (req, res) => {
       출판사: item.publisher,
       출간일: item.pubdate
     }));
+    
+    // intellibook.org 서버로 데이터 전송
+    axios.post('https://intellibook.org/api/data', items)
+        .then(function (response) {
+            console.log(response.data);
+        })
+        .catch(function (error) {
+            console.error(error);
+        });
     res.send(items);
   }).catch(function (error) {
     console.error(error);
@@ -48,9 +57,7 @@ app.listen(port, () => {
 });
 
 
-
-
-/*--------------------------------------------기존 적용
+/*-------------------------------------------------------------------------------------------------
 const express = require('express');
 const app = express();
 const port = 3000;
@@ -79,7 +86,17 @@ app.get('/', (req, res) => {
   options.params.query = query;
   // axios로 API 요청
   axios.request(options).then(function (response) {
-    res.send(response.data);
+    // items 배열에서 원하는 속성만 추출
+    const items = response.data.items.map(item => ({
+      책제목: item.title,
+      링크: item.link,
+      사진: item.image,
+      저자: item.author,
+      가격: item.discount,
+      출판사: item.publisher,
+      출간일: item.pubdate
+    }));
+    res.send(items);
   }).catch(function (error) {
     console.error(error);
     res.status(500).send('Internal server error');
@@ -89,6 +106,7 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+*/
 
 /*---------------------------------- axios.post 함수 추가 -> intellibook.org 로 데이터 전송 
 const express = require('express');
