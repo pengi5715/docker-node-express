@@ -106,7 +106,6 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
-*/
 
 /*---------------------------------- axios.post 함수 추가 -> intellibook.org 로 데이터 전송 
 const express = require('express');
