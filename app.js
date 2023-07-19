@@ -74,7 +74,7 @@ const options = {
   'params': {}
 };
 
-app.get('/', (req, res) => {
+app.get('https://port-0-docker-node-express-rt92alk7lpv3w.sel4.cloudtype.app/', (req, res) => {
   // req.query에서 query 파라미터를 받아옴
   const query = req.query.query;
   // query 파라미터가 없으면 에러 메시지 전송
